@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --colorPrincipal: #110957;
+}
+body{
+    font-family: 'Boldonse';
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-imagen{
+    display: none; /*Ocultamos El Elemento */
+    
+}
+
+.login-form h2{
+    color: var(--BotonIngresar, rgb(17, 9, 87));
+    text-align: center;         /*Centrar Texto*/
+    font-family: 'Boldonse';       /* Tipografia*/
+    font-size: 32px;            /* Tamaño del texto */
+    font-style: normal;         /* Darle estilo a la letra*/
+    font-weight: 700;           /* Darle grosor al texto*/
+    line-height: normal;        /*La distancia que tiene el parrafo */
+    letter-spacing: 1.6px;      /*Espacio entre las letras*/
+}
+.login-form{
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.perfil-imagen{
+    display: flex;  
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.perfil-imagen img {
+    width: 157px;
+    height: 151px;
+    border-radius: 500px;   
+    object-fit: cover;
+}
+
+
+.input-group{
+    margin-bottom: 15px;        /*separacion de 15px*/
+}
+
+.input-group label{
+    color: #110957;
+    font-family: 'Boldonse';      
+    font-size: 16px;
+    font-style: normal;         
+    font-weight: 600;           
+    line-height: 250%;       
+    letter-spacing: 0.8px; 
+    font-size: 14px;
+    display: block;
+    margin-bottom:5px;
+}
+
+.input-group input{
+    width: 90%;        /*Ancho del 100% */
+    padding: 12px;      /* buttom. top. rihht. let */
+    border: 1px solid  #000000;
+    border-radius: 50px;    /*Border de 50px*/
+    font-size: 14px;    /*Tamaño de texto*/
+    outline: none;
+    transition: 0.3; /* Agregamos transicion al input*/
+}
+
+/*Ocultar y ver contraseña*/
+.pass-group{
+    position: relative;
+}
+
+
+.eyes-password{
+    position:absolute;
+    right: 20px; /*Un espacio a la derecha de 10px*/
+    top: 50%; /*Un espacio arriba del 70%*/
+    cursor: pointer; /*Ver y ocultar contraseña*/
+    font-size: 18px; /*Tamaño del icono*/
+    color: #000000; /*Color de icono*/
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--colorPrincipal);
+    border: none;       /*Sin lineas de los borders*/
+    border-radius: 50px;
+    color: #ffffff;       /*Texto del color blanco*/
+    cursor: pointer;        /*Icono de la mano*/
+    font-size: 16px;         /*tamaño text*/
+    padding: 12px; /*top,right,left,buttom*/
+}
+
+@media (min-width: 768px){
+    login-imagen{
+        display: block; /* APARECE LA IMAGEN */
+    }
+}
+
+@media (min-width:1024px){
+    .login-imagen{
+        display: block; /*Aparece la imagen*/
+    }
+
+    .login-section{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+
+    }
+    /*Columna izq*/
+    .login-imagen{
+        flex:1;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+      .login-imagen img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .login-form{
+        flex:1;
+        background-color: #ffffff;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0 15px 15px 0;
+        max-width: 15%;
+    }
+    
+    .menu-form{
+        color: #110957;
+        font-family: 'Boldonse';
+
+    }
+
+}
