@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
+
+:root {
     --colorPrincipal: #110957;
 }
-body{
+
+body {
+    background: url(file:///C:/Users/USER/Pictures/fondo.webp);
     font-family: 'Boldonse';
     margin: 0;
     padding: 0;
@@ -11,32 +14,41 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-.login-imagen{
-    display: none; /*Ocultamos El Elemento */
-    
+/* ✅ Fondo para móvil/tablet */
+.bg-img {
+    position: fixed;
+    inset: 0;              
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;           
+    display: block;
 }
 
-.login-form h2{
+/* Ocultamos imagen lateral por defecto */
+.login-imagen {
+    display: none;
+}
+
+.login-form h2 {
     color: var(--BotonIngresar, rgb(17, 9, 87));
-    text-align: center;         /*Centrar Texto*/
-    font-family: 'Boldonse';       /* Tipografia*/
-    font-size: 32px;            /* Tamaño del texto */
-    font-style: normal;         /* Darle estilo a la letra*/
-    font-weight: 700;           /* Darle grosor al texto*/
-    line-height: normal;        /*La distancia que tiene el parrafo */
-    letter-spacing: 1.6px;      /*Espacio entre las letras*/
+    text-align: center;
+    font-family: 'Boldonse';
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
 }
-.login-form{
+
+.login-form {
     width: 100%;
     max-width: 100%;
     padding: 5px;
 }
 
-.perfil-imagen{
-    display: flex;  
+.perfil-imagen {
+    display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -44,98 +56,94 @@ body{
 .perfil-imagen img {
     width: 157px;
     height: 151px;
-    border-radius: 500px;   
+    border-radius: 500px;
     object-fit: cover;
 }
 
-
-.input-group{
-    margin-bottom: 15px;        /*separacion de 15px*/
+.input-group {
+    margin-bottom: 15px;
 }
 
-.input-group label{
+.input-group label {
     color: #110957;
-    font-family: 'Boldonse';      
-    font-size: 16px;
-    font-style: normal;         
-    font-weight: 600;           
-    line-height: 250%;       
-    letter-spacing: 0.8px; 
+    font-family: 'Boldonse';
     font-size: 14px;
+    font-weight: 600;
+    line-height: 250%;
+    letter-spacing: 0.8px;
     display: block;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 
-.input-group input{
-    width: 90%;        /*Ancho del 100% */
-    padding: 12px;      /* buttom. top. rihht. let */
-    border: 1px solid  #000000;
-    border-radius: 50px;    /*Border de 50px*/
-    font-size: 14px;    /*Tamaño de texto*/
+.input-group input {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-size: 14px;
     outline: none;
-    transition: 0.3; /* Agregamos transicion al input*/
+    transition: 0.3s;
 }
 
-/*Ocultar y ver contraseña*/
-.pass-group{
+.pass-group {
     position: relative;
 }
 
-
-.eyes-password{
-    position:absolute;
-    right: 20px; /*Un espacio a la derecha de 10px*/
-    top: 50%; /*Un espacio arriba del 70%*/
-    cursor: pointer; /*Ver y ocultar contraseña*/
-    font-size: 18px; /*Tamaño del icono*/
-    color: #000000; /*Color de icono*/
+.eyes-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000000;
 }
 
-.btn{
+.btn {
     width: 100%;
     background-color: var(--colorPrincipal);
-    border: none;       /*Sin lineas de los borders*/
+    border: none;
     border-radius: 50px;
-    color: #ffffff;       /*Texto del color blanco*/
-    cursor: pointer;        /*Icono de la mano*/
-    font-size: 16px;         /*tamaño text*/
-    padding: 12px; /*top,right,left,buttom*/
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
 }
 
-@media (min-width: 768px){
-    login-imagen{
-        display: block; /* APARECE LA IMAGEN */
+/* --- MEDIA QUERIES --- */
+@media (min-width: 768px) {
+    .login-imagen {
+        display: block;
     }
 }
 
-@media (min-width:1024px){
-    .login-imagen{
-        display: block; /*Aparece la imagen*/
+@media (min-width: 1024px) {
+    .login-imagen {
+        display: block;
     }
 
-    .login-section{
+    .login-section {
         display: flex;
         height: 100vh;
         width: 100vw;
-
     }
-    /*Columna izq*/
-    .login-imagen{
-        flex:1;
+
+    /* Columna izq con imagen escritorio */
+    .login-imagen {
+        flex: 1;
         background-color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-      .login-imagen img{
+    .login-imagen img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .login-form{
-        flex:1;
+    .login-form {
+        flex: 1;
         background-color: #ffffff;
         padding: 40px;
         display: flex;
@@ -144,11 +152,9 @@ body{
         border-radius: 0 15px 15px 0;
         max-width: 15%;
     }
-    
-    .menu-form{
+
+    .menu-form {
         color: #110957;
         font-family: 'Boldonse';
-
     }
-
 }
