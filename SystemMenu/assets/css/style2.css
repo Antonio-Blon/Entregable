@@ -4,21 +4,26 @@
     --colorPrincipal: #110957;
 }
 
-.menu-form { 
+.menu-form {
     color: #110957;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2px;
 }
 
 .menu-form h2 {
     font-family: 'Boldonse';
     margin-top: 40px;
-    text-align: center;
+    text-align: left;
 }
 
 .intro-form p {
     font-family: 'Boldonse';
     color: #110957;
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
+    max-width: 700px;
 }
 
 .titulo-linea {
@@ -64,6 +69,9 @@ body {
 
 .card {
     width: 325px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
     background-color: #52A9DF;
     border-radius: 8px;
     overflow: hidden;
@@ -73,7 +81,8 @@ body {
 
 card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-content {
@@ -84,6 +93,11 @@ card img {
 .card-content h3 {
     font-size: 28px;
     margin-bottom: 8;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .card-container p {
@@ -133,4 +147,34 @@ card img {
 .nutrition-info span {
     font-size: 11px;
     font-style: italic;
+}
+
+.centered-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+/* Estilo del icono hamburguesa */
+.custom-toggler {
+    border: none;
+    background: none;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Texto de código parental */
+.parental-link {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.parental-link:hover {
+    text-decoration: underline;
 }

@@ -9,16 +9,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
     <!--Codigo De Barra-->
-    <nav class="navbar bg-primary navbar" data-bs-theme="dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar bg-primary navbar-dark">
+        <div class="container-fluid position-relative">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#menuLateral" aria-controls="menuLateral">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Título centrado -->
+            <a class="navbar-brand centered-brand" href="#">EatSavvy</a>
+            <a href="#" class="parental-link ms-auto">
+                Iniciar con código parental
+            </a>
         </div>
+    </nav>
+    <!--Menu Hamburguesa-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuLateralLabel">Menú</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Iniciar Sesion</a> <!-- 🔹 aquí pones tu ruta -->
+                </li>
+            </ul>
+        </div>
+    </div>
     </nav>
     <!--Introduccion-->
     <div class="menu-form">
@@ -194,7 +214,7 @@
         </div>
     </div>
     <!--Cards 2-->
-        <div class="card-container">
+    <div class="card-container">
         <div class="card">
             <img src="assets/images/CauCau.webp">
             <div class="card-content">
@@ -270,13 +290,13 @@
                 <a href="" class="btn">Añadir</a>
             </div>
         </div>
-    <!--Titulo 3-->
+        <!--Titulo 3-->
     </div>
     <div class="titulo-linea">
         <h3>Postres</h3>
     </div>
     <!--Cards -->
-        <div class="card-container">
+    <div class="card-container">
         <div class="card">
             <img src="assets/images/P1.webp">
             <div class="card-content">
@@ -377,9 +397,10 @@
                 <a href="" class="btn">Añadir</a>
             </div>
         </div>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
