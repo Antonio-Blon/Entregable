@@ -10,6 +10,7 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<script src="script.js"></script>
 
 <body>
     <div class="overlay"></div>
@@ -27,11 +28,11 @@
             <form>
                 <div class="input-group">
                     <label for="">Correo Electronico</label>
-                    <input type="text" placeholder="Ingresa Tu Correo">
+                    <input type="text" id="u" placeholder="Ingresa Tu Correo">
                 </div>
                 <div class="input-group pass-group">
                     <label for="">Contraseña</label>
-                    <input type="password" placeholder="Ingresa Tu Contraseña">
+                    <input type="password" id="c" placeholder="Ingresa Tu Contraseña">
                     <!--Y este el codigo donde se pondra el codigo del icono que quieras poner-->
                     <span class="eyes-password">
                         <i class="fa-solid fa-eye-slash"></i>
@@ -45,7 +46,23 @@
                         <a href="recuperar.html">Recuperar Contraseña</a>
                     </div>
                 </div>
-                <button type="submit" class="btn">Ingresar</button>
+                <button type="submit" class="btn" id="boton">Ingresar</button>
+                <script>
+                    document.getElementById("boton").addEventListener("click", function () {
+                        let user = document.getElementById("u").value
+                        let contra = document.getElementById("c").value
+                        console.log("USER: " + user)
+                        console.log("PASS: " + contra)
+                        if (user == "admin" && contra == "123") {
+                            console.log("¡Bienvenido!")
+                            alert("¡Bienvenido! Datos correctos" )
+                        } else {
+                            alert("Datos incorrectos")
+                        }
+                    });
+                </script>
+
+
             </form>
         </div>
     </div>
