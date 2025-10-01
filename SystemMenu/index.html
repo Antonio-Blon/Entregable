@@ -46,7 +46,7 @@
                         <a href="recuperar.html">Recuperar Contraseña</a>
                     </div>
                 </div>
-                <button type="submit" class="btn" id="boton">Ingresar</button>
+                <button type="button" class="btn" id="boton">Ingresar</button>
                 <script>
                     document.getElementById("boton").addEventListener("click", function () {
                         let user = document.getElementById("u").value
@@ -55,7 +55,7 @@
                         console.log("PASS: " + contra)
                         if (user == "admin" && contra == "123") {
                             console.log("¡Bienvenido!")
-                            alert("¡Bienvenido! Datos correctos" )
+                            window.location.href = 'interfaz.html'
                         } else {
                             alert("Datos incorrectos")
                         }
